@@ -1,0 +1,95 @@
+.contenedor{
+    height: 100vh;
+    grid-gap: 0.2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "header header header"
+        "header1 header1 header1"
+        "menuizquierdo principal menuderecho1"
+        "menuizquierdo1 principal1 menuderecho1"
+        "footer footer footer"
+        "footer1 footer1 footer1"
+
+}
+.header{
+    grid-area: header;
+    background-color: rgb(87, 64, 170);
+}
+.header1{
+    grid-area: header1;
+    background-color: rgb(115, 16, 82);
+}
+.menuizquierdo{
+    grid-area: menuizquierdo;
+    background-color: rgb(51, 255, 0);
+}
+
+.menuizquierdo1{
+    grid-area: menuizquierdo1;
+    background-color: rgb(121, 121, 177);
+}
+
+.principal{
+    grid-area: principal;
+    background-color: rgb(87, 47, 197);
+}
+
+.principal1{
+    grid-area: principal1;
+    background-color: rgb(154, 132, 214);
+}
+
+.menuderecho1{
+    grid-area: menuderecho1;
+    background-color: rgb(233, 62, 19);
+}
+
+.menuderecho1{
+    grid-area: menuderecho1;
+    background-color: rgb(202, 132, 114);
+}
+.footer{
+    grid-area: footer;
+    background-color: rgb(226, 241, 12);
+}
+.footer1{
+    grid-area: footer1;
+    background-color: rgb(226, 241, 12);
+}
+
+
+@media screen and (max-width: 1000px) { 
+    .contenedor{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "header header "
+        "header1 header1"
+        "menuizquierdo principal"
+        "menuizquierdo1 principal1"
+        "menuderecho1 menuderecho1"
+        "footer footer"
+        "footer1 footer1"
+        
+    }   
+}
+
+@media screen and (max-width: 780px) { 
+    .contenedor{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "header"
+        "header1"
+        "menuizquierdo"
+        "menuizquierdo1"
+        "principal"      
+        "principal1"
+        "menuderecho"
+        "menuderecho1"
+        "footer"
+        "footer1"; 
+        }   
+    }
